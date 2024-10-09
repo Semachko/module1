@@ -49,6 +49,7 @@ def main():
         a = input("a = ")
         b = input("b = ")
         c = input("c = ")
+        triangle_sides = [a, b, c]
         new_lang = input("Введіть мову інтерфейсу: ")
         new_text = [
             "Мова: ",
@@ -66,11 +67,11 @@ def main():
 
         if mod.is_triangle_exists(triangle_sides):
             result += (
-                text[1]
+                new_text[1]
                 + triangle_sides[0]
                 + triangle_sides[1]
                 + triangle_sides[2]
-                + text[2],
+                + new_text[2]
             )
 
             if mod.is_triangle_right(triangle_sides):
@@ -86,6 +87,7 @@ def main():
                     + new_text[8]
                     + triangle_sides[2]
                 )
+
             else:
                 result += new_text[5]
         else:
@@ -96,6 +98,9 @@ def main():
                 + triangle_sides[2]
                 + new_text[3]
             )
+        with open("MyData.txt", "w") as file:
+            file.write(result)
+            print('File "MyData.txt" is saved')
 
 
 if __name__ == "__main__":

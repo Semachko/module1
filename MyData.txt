@@ -1,1 +1,5 @@
-gasdfgsdf
+Language:en
+Triangle with sides:345existsA triangle is right-angled
+Leg 1 =3
+Leg 2 =4
+Hypotenuse =5
